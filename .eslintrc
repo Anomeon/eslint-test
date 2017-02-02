@@ -1,0 +1,22 @@
+{
+  "extends": "eslint:recommended",
+
+  "env": {
+    "browser": 1
+  },
+ 
+  "globals": {
+  },
+
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+ 
+  "rules": {
+    "quotes": [1, "single"],
+    "eqeqeq": 2,
+    "strict": 2,
+    "indent": ["warn", 2],
+    "semi": [2]
+  }
+}
