@@ -2,21 +2,27 @@
   "extends": "eslint:recommended",
 
   "env": {
-    "browser": 1
+    "browser": 1                         // Work with browser API (ex. window, XHR)
   },
  
   "globals": {
   },
 
   "parserOptions": {
-    "ecmaVersion": 6
+    "ecmaVersion": 6                     // Support es2015 syntax
   },
  
   "rules": {
-    "quotes": [1, "single"],
-    "eqeqeq": 2,
-    "strict": 2,
-    "indent": ["warn", 2],
-    "semi": [2]
+    "quotes": [1, "single"],             // Use single quotes
+    "eqeqeq": 2,                         // Only strict ===
+    "strict": 2,                         // Use 'use strict'
+    "indent": ["warn", 2],               // Use for indent 2 spaces
+    "semi": [2],                         // Semicolons is required
+    "no-bitwise": 2,                     // |, & no bitwise operators
+    "curly": 2,                          // No short expressions (ex. if (true) myExpression)
+    "no-caller": 2,                      // No arguments.caller and arguments.callee
+    "dot-notation": 1,                   // Prefer dot notation than brackets
+    "max-len": ["warn", 90],             // String max length
+    "linebreak-style": ["error", "unix"] // LF linebreak
   }
 }
