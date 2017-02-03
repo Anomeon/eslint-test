@@ -10,9 +10,10 @@ const paths = {
 }
 
 gulp.task('js-eslint', _ => {
-  return gulp.src(paths.js.src)
-    .pipe(eslint())
-    .pipe(eslint.format());
+  return gulp.src(paths.js.src, {base: './'})
+    .pipe(eslint({fix: true}))
+    .pipe(eslint.format())
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('watch', _ => {
